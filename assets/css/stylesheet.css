@@ -1,0 +1,543 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Cerebri Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 100%;
+}
+
+body {
+    background-color: #fff;
+    font-size: 1em;
+    line-height: 1.25;
+}
+
+@font-face {
+    font-family: "Cerebri Sans";
+    src: url("../fonts/CerebriSans-Light.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('../fonts/CerebriSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('../fonts/CerebriSans-Bold.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+.clearfix:after, .clearfix:before {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear: both;
+    font-weight: 800;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size-adjust: 0.5;
+}
+
+h1 {
+    font-size: 1.8em;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 1.625em;
+    line-height: 1.15384615;
+}
+
+h3 {
+    font-size: 1.375em;
+    line-height: 1.13636364;
+}
+
+h4 {
+    font-size: 1.125em;
+    line-height: 1.11111111;
+}
+
+h5, h6 {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+a {
+    color: #2980B9;
+    font-weight: initial;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #222;
+}
+
+::-moz-selection {
+    color: #222;
+    background: #fdcb6e;
+}
+
+::selection {
+    color: #222;
+    background: #fdcb6e;
+}
+
+main {
+    max-width: 940px;
+    margin: auto;
+    padding: 0 30px;
+    text-align: center;
+    overflow: auto;
+}
+
+.header {
+    overflow: auto;
+    margin: 60px 0 100px;
+}
+
+.article {
+    padding-bottom: 100px;
+    margin: auto;
+    overflow: auto;
+    text-align: center;
+    padding-top: 50px;
+    max-width: 620px;
+    color: #444;
+}
+
+.post-header {
+    text-align: center;
+    display: block;
+    margin: auto auto 3em;
+}
+
+.post-excerpt {text-align:  left;}
+
+.post-info {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 50px;
+}
+
+.post-info a {
+    text-decoration: none;
+    color: #888;
+}
+
+.post-info a:hover {
+    color: rgba(0, 0, 0, 1);
+    text-decoration:  underline;
+}
+
+.post-title {
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+
+.post-title a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.post-date {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.post-date a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+em {
+    font-style: italic;
+}
+
+img {
+    max-width: 100%;
+    font-style: italic;
+    height:  auto;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.wp-caption {
+    max-width: 100%;
+    padding: 0 1em;
+    margin: 2.25em 0 2.25em;
+}
+
+.wp-caption-text {
+    font-size: 0.6875rem;
+    line-height: 16px;
+    margin: .5em 0 0;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.wp-caption img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 .5em;
+    border-radius: 5px;
+    display: block;
+}
+
+blockquote {
+    font-style: italic;
+    padding: 0 0 0 30px;
+    border-left: 5px solid #f0f0f0;
+    font-family: Georgia,serif;
+    position: relative;
+}
+
+blockquote:before {
+    font-size: 3.75em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    position: absolute;
+    top: -12px;
+    left: 5px;
+}
+
+blockquote p {
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.5;
+    font-size: 2em;
+}
+
+hr {
+    height: 5px;
+    background: #f0f0f0;
+    margin: 50px auto;
+    width: 100px;
+    border: none;
+}
+
+.post-excerpt ul, .post-excerpt ol {
+    margin: 0 0 1.25em;
+    overflow: auto;
+    list-style: none;
+}
+
+.post-excerpt ul li, .post-excerpt ol li {
+    color: rgba(0, 0, 0, 0.5);
+    float: none;
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.post-excerpt ul li:last-child, .post-excerpt ol li:last-child {
+    border-bottom: none;
+}
+
+.header-logo {
+    display: block;
+    text-align: left;
+    margin: 0;
+    background: content-box;
+}
+
+.header-logo .logo {
+    text-decoration: none;
+    color: inherit;
+    font-size: 33px;
+    font-weight:  600;
+}
+
+.header-logo:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.social-accounts {
+    float: right;
+    margin-top: 14px;
+}
+
+.sub-header {
+    margin: 20px 0 0 0;
+    text-align: left;
+    color: #888;
+    max-width: 500px;
+}
+
+ul.nav-menu {
+    list-style-type: none;
+    overflow: auto;
+}
+
+ul.nav-menu li {
+    float: left;
+    padding: 8px 0;
+    width: 33%;
+    text-align: left;
+    margin: 0;
+}
+
+ul.nav-menu li a {
+    color: #2980B9;
+}
+
+.page_item a {
+}
+
+ul.nav-menu li a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+ul {
+    list-style:  none;
+}
+
+li {
+    float: left;
+    margin-right: 1em;
+}
+
+li a {
+}
+
+.cat-title {
+    text-align: center;
+}
+
+footer {
+    padding: 0 0 50px 0;
+    color: #888;
+    text-align: center;
+    font-size: 1em;
+    margin: auto;
+}
+
+.social-icons li {
+    margin: 0 0 0 15px;
+    display: inline-block;
+}
+
+.social-icons ul {
+    list-style: none;
+    display: flex;
+}
+
+.social-icons ul li a {
+    color: transparent;
+    height: 18px;
+    display: block;
+    opacity: 0.5;
+    overflow: auto;
+    width: 18px;
+}
+
+.social-icons ul li a:hover {
+    opacity: 0.7;
+}
+
+a.icon-in {
+    background: url(../img/instagram.png) no-repeat center center / cover;
+}
+
+a.icon-pi {
+    background: url(../img/pinterest.png) no-repeat center center / cover;
+}
+
+a.icon-tw {
+    background: url(../img/twitter.png) no-repeat center center / cover;
+}
+
+a.icon-fb {
+    background: url(../img/facebook.png) no-repeat center center / cover;
+}
+
+a.icon-dr {
+    background: url(../img/dribbble.png) no-repeat center center / cover;
+}
+
+.bar {
+    height: 50px;
+    line-height: 50px;
+    font-size: 0.95em;
+    border-bottom: 1px solid #eee;
+}
+
+.pagination {
+    display: block;
+    overflow: auto;
+    text-align: center;
+    padding-bottom: 5em;
+}
+
+ul.page-numbers {
+    list-style: none;
+    margin: 0 0 5em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.page-numbers:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+ul.page-numbers li {
+    display: block;
+    float: left;
+    margin: 2px;
+    text-align: center;
+}
+
+.page-numbers a,
+.page-numbers span {
+    display: block;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0 11px;
+    line-height: 2em;
+    font-size: 0.95em;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.page-numbers a span {
+    padding: 0;
+}
+
+.page-numbers a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.8);
+}
+.page-numbers.current,
+.page-numbers.current:hover {
+    color: #fff;
+    background: #2980b9;
+}
+
+a.prev.page-numbers:hover,
+a.next.page-numbers:hover {
+    background: #fff;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.page-numbers:hover {
+    text-decoration: none;
+}
+
+p.heading {
+    font-size: 1.6em;
+    font-weight: 100;
+    line-height: 1.4em;
+}
+
+main img {
+    margin: 50px auto 0;
+}
+
+.header-logo ul.nav-menu {
+    margin-top: 40px;
+}
+
+.divider {
+    background: #f0f0f0;
+    height: 5px;
+    width: 100px;
+    margin: 50px 0;
+}
+
+.sticky {
+
+}
+.screen-reader-text  {
+
+}
+.gallery-caption {
+
+}
+.bypostauthor {
+
+}
+.alignright {
+    
+}
+.alignleft {
+
+}
+.aligncenter {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    main {
+        max-width: 740px;
+    }
+
+    .header-logo {
+        float: initial;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    main {
+        max-width: 620px;
+        padding: 0 30px;
+    }
+
+    .header {
+        margin: 30px 0 0;
+    }
+
+    .social-accounts {
+        position: relative;
+    }
+
+}
