@@ -1,6 +1,6 @@
 # Ab initio WordPress Theme
 
-WordPress Theme
+Blogging WordPress Theme
 
 
 ![Alt text](screenshot.png)
